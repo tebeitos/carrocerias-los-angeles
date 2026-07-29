@@ -65,15 +65,24 @@ Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir l
           </p>
         </div>
 
-        <!-- Contenedor del placeholder de historia solicitado -->
-        <div class="history-placeholder-box">
-          <span class="placeholder-tag">DOCUMENTACIÓN EN CURSO</span>
-          <div class="placeholder-text-inner">
-            [PENDIENTE: texto de la historia del oficio]
+        <!-- Columna de imagen y placeholder de historia -->
+        <div class="artisan-image-column">
+          <div class="artisan-img-wrapper">
+            <img 
+              src="/trabajo_paragolpes.jpg" 
+              alt="Dos paragolpes recién pintados en negro de alto brillo sobre soportes en la cabina del taller" 
+              class="artisan-img" 
+            />
           </div>
-          <p class="placeholder-note">
-            Este espacio está reservado para la incorporación del texto histórico detallado sobre la trayectoria y evolución de las técnicas de conformado manual en nuestro taller de Roces.
-          </p>
+          <div class="history-placeholder-box-inline">
+            <span class="placeholder-tag">DOCUMENTACIÓN EN CURSO</span>
+            <div class="placeholder-text-inner">
+              [PENDIENTE: texto de la historia del oficio]
+            </div>
+            <p class="placeholder-note">
+              Este espacio está reservado para la incorporación del texto histórico detallado sobre la trayectoria y evolución de las técnicas de conformado manual en nuestro taller de Roces.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -616,10 +625,31 @@ Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir l
     color: var(--color-red);
   }
 
-  .history-placeholder-box {
+  .artisan-image-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .artisan-img-wrapper {
+    width: 100%;
+    border: var(--border-width) solid var(--color-black);
+    background-color: var(--color-black);
+    overflow: hidden;
+  }
+
+  .artisan-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 4/3;
+  }
+
+  .history-placeholder-box-inline {
     background-color: white;
     border: var(--border-width) dashed var(--color-black);
-    padding: 35px;
+    padding: 25px 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
