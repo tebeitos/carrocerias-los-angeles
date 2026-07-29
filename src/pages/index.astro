@@ -50,22 +50,7 @@ import { negocio } from '../data/negocio';
       </div>
 
       <div class="artisan-content-box">
-        <div class="text-content">
-          <p>
-            El verdadero oficio de chapista está desapareciendo. En la actualidad, la tendencia mayoritaria en los talleres de carrocería modernos es la sustitución rápida: cortar la sección dañada del coche, desecharla y atornillar o pegar una pieza de repuesto fabricada en serie. Se trabaja con prisa y bajo baremos temporales impuestos por aseguradoras.
-          </p>
-          <p>
-            En <strong>Carrocerías Los Ángeles</strong> mantenemos viva la esencia del chapista de los de antes: el artesano que entiende la elasticidad del acero, que lee las tensiones acumuladas en la chapa tras una colisión y que sabe con precisión milimétrica dónde golpear para devolver el metal a su estado original. 
-</p>
-          <p>
-Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir la chapa a mano, pero evaluamos cada caso, ya que según la gravedad del impacto no siempre es técnicamente posible recuperarla y es necesario combinarlo con otras técnicas profesionales.
-          </p>
-          <p>
-            Cuando es viable, utilizamos herramientas tradicionales —el martillo de carrocero, el tas de mano y la lima de repasar— para que la chapa recupere su curvatura original. Es un oficio de paciencia y oído, que asegura que su vehículo conserve su integridad estructural.
-          </p>
-        </div>
-
-        <!-- Columna de imagen de trabajos de chapa y pintura -->
+        <!-- Columna de imagen de trabajos de chapa y pintura (primero en HTML para flotar) -->
         <div class="artisan-image-column">
           <div class="artisan-img-wrapper">
             <img 
@@ -74,6 +59,21 @@ Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir l
               class="artisan-img" 
             />
           </div>
+        </div>
+
+        <div class="text-content">
+          <p>
+            El verdadero oficio de chapista está desapareciendo. En la actualidad, la tendencia mayoritaria en los talleres de carrocería modernos es la sustitución rápida: cortar la sección dañada del coche, desecharla y atornillar o pegar una pieza de repuesto fabricada en serie. Se trabaja con prisa y bajo baremos temporales impuestos por aseguradoras.
+          </p>
+          <p>
+            En <strong>Carrocerías Los Ángeles</strong> mantenemos viva la esencia del chapista de los de antes: el artesano que entiende la elasticidad del acero, que lee las tensiones acumuladas en la chapa tras una colisión y que sabe con precisión milimétrica dónde golpear para devolver el metal a su estado original. 
+          </p>
+          <p>
+            Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir la chapa a mano, pero evaluamos cada caso, ya que según la gravedad del impacto no siempre es técnicamente posible recuperarla y es necesario combinarlo con otras técnicas profesionales.
+          </p>
+          <p>
+            Cuando es viable, utilizamos herramientas tradicionales —el martillo de carrocero, el tas de mano y la lima de repasar— para que la chapa recupere su curvatura original. Es un oficio de paciencia y oído, que asegura que su vehículo conserve su integridad estructural.
+          </p>
         </div>
       </div>
     </div>
@@ -593,16 +593,7 @@ Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir l
   }
 
   .artisan-content-box {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
-  }
-
-  @media (max-width: 850px) {
-    .artisan-content-box {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
+    display: block;
   }
 
   .text-content p {
@@ -617,9 +608,10 @@ Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir l
   }
 
   .artisan-image-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    float: right;
+    width: 44%;
+    margin-left: 35px;
+    margin-bottom: 15px;
   }
 
   .artisan-img-wrapper {
@@ -637,14 +629,19 @@ Somos de la vieja escuela, pero también sabemos adaptarnos: priorizamos batir l
     aspect-ratio: 4/3;
   }
 
-  .history-placeholder-box-inline {
-    background-color: white;
-    border: var(--border-width) dashed var(--color-black);
-    padding: 25px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+  @media (max-width: 850px) {
+    .artisan-content-box {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 25px;
+    }
+
+    .artisan-image-column {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
   }
 
   .placeholder-tag {
