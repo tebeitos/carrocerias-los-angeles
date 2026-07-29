@@ -89,11 +89,17 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
             <span class="hamburger-line line-3"></span>
           </button>
           
-          <!-- Logotipo centrado y equilibrado en móvil -->
+          <!-- Logotipo réplica rótulo real recuperado en móvil -->
           <a href="/" class="mobile-logo-link" title="Inicio - Carrocerías Los Ángeles">
-            <div class="mobile-logo-text">
-              <span class="mobile-logo-carr">Carrocerías</span>
-              <span class="mobile-logo-la">LOS ANGELES</span>
+            <div class="logo-block">
+              <div class="logo-top-row">
+                <div class="banner-divided">
+                  <span class="banner-text">Carrocerías</span>
+                </div>
+              </div>
+              <div class="logo-bottom-row">
+                <span class="logo-main-title">LOS ANGELES</span>
+              </div>
             </div>
           </a>
           
@@ -429,7 +435,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
   .mobile-header-bar {
     display: none;
     width: 100%;
-    height: 65px;
+    height: 95px;
     background-color: var(--color-bg);
     align-items: center;
     justify-content: space-between;
@@ -477,29 +483,8 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
   .mobile-logo-link {
     color: inherit;
     display: block;
-  }
-
-  .mobile-logo-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 0.9;
-  }
-
-  .mobile-logo-carr {
-    font-family: var(--font-logo);
-    color: var(--color-red);
-    font-size: 1.3rem;
-    transform: skewX(-6deg);
-    font-weight: normal;
-  }
-
-  .mobile-logo-la {
-    font-family: var(--font-title);
-    color: var(--color-black);
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
+    flex-grow: 1;
+    text-align: center;
   }
 
   /* Botón llamar derecho */
@@ -520,13 +505,29 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     height: 24px;
   }
 
+  /* Adaptación extra del logotipo para móviles pequeños */
+  @media (max-width: 400px) {
+    .mobile-header-bar .banner-divided {
+      height: 36px;
+      padding: 0 20px;
+    }
+    .mobile-header-bar .banner-text {
+      font-size: 1.4rem;
+    }
+    .mobile-header-bar .logo-main-title {
+      font-size: 2rem;
+      -webkit-text-stroke: 1px var(--color-black);
+      text-shadow: 1.5px 1.5px 0px var(--color-black);
+    }
+  }
+
   /* --- MENÚ DESPLEGABLE MÓVIL (DESDE LA IZQUIERDA) --- */
   .mobile-nav-menu {
     position: fixed;
-    top: 77px; /* 65px header + 12px faja industrial */
+    top: 107px; /* 95px header + 12px faja industrial */
     left: 0;
     width: 280px;
-    height: calc(100vh - 77px);
+    height: calc(100vh - 107px);
     background-color: var(--color-black);
     border-right: var(--border-width) solid var(--color-red);
     transform: translateX(-105%);
