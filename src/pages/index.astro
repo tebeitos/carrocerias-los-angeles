@@ -856,17 +856,14 @@ import { negocio } from '../data/negocio';
   }
 
   .classics-layout {
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 40px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
 
-  @media (max-width: 850px) {
-    .classics-layout {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
+  .classics-text {
+    max-width: 900px;
+    width: 100%;
   }
 
   .classics-text p {
