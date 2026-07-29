@@ -611,7 +611,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
   @media (max-width: 768px) {
     .main-header {
       padding: 0;
-      border-bottom: var(--border-width) solid var(--color-black);
+      border-bottom: none;
     }
     .mobile-header-bar {
       display: flex;
@@ -621,6 +621,9 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     }
     .desktop-nav-only {
       display: none;
+    }
+    .main-content {
+      padding: 10px 0 40px 0;
     }
   }
 
