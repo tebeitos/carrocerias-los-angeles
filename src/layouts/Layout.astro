@@ -79,39 +79,81 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     <div class="page-wrapper">
       <!-- Encabezado Principal -->
       <header class="main-header">
-        <div class="header-inner">
+        
+        <!-- Barra de Cabecera Móvil (Visible solo en móvil) -->
+        <div class="mobile-header-bar">
+          <!-- Botón menú desplegable a la izquierda -->
+          <button id="menu-toggle" class="menu-toggle-btn" aria-label="Abrir menú de navegación" aria-controls="mobile-nav">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </button>
           
-          <!-- Bloque del Logotipo Réplica Rótulo Real (Pulido sin iconos externos) -->
-          <a href="/" class="logo-link" title="Inicio - Carrocerías Los Ángeles">
-            <div class="logo-block">
-              <div class="logo-top-row">
-                <div class="banner-divided">
-                  <span class="banner-text">Carrocerías</span>
-                </div>
-              </div>
-              <div class="logo-bottom-row">
-                <span class="logo-main-title">LOS ANGELES</span>
-              </div>
+          <!-- Logotipo centrado y equilibrado en móvil -->
+          <a href="/" class="mobile-logo-link" title="Inicio - Carrocerías Los Ángeles">
+            <div class="mobile-logo-text">
+              <span class="mobile-logo-carr">Carrocerías</span>
+              <span class="mobile-logo-la">LOS ANGELES</span>
             </div>
           </a>
-
-          <!-- Subtítulo de Solera del Taller -->
-          <p class="tagline">{negocio.eslogan}</p>
-
-          <!-- Navegación Industrial -->
-          <nav class="industrial-nav">
-            <ul>
-              <li><a href="/" class="nav-item">INICIO</a></li>
-              <li><a href="/#oficio" class="nav-item">EL OFICIO</a></li>
-              <li><a href="/#comparativa" class="nav-item">BATIR VS SOLDAR</a></li>
-              <li><a href="/#instalaciones" class="nav-item">EL TALLER</a></li>
-              <li><a href="/#clasicos" class="nav-item">RESTAURACIÓN</a></li>
-              <li><a href="/#trabajos" class="nav-item">TRABAJOS</a></li>
-              <li><a href="/#opiniones" class="nav-item">OPINIONES</a></li>
-              <li><a href="/#contacto" class="nav-item">CONTACTO</a></li>
-            </ul>
-          </nav>
+          
+          <!-- Botón de llamar a la derecha para equilibrar visualmente -->
+          <a href={`tel:${negocio.telefonoLink}`} class="mobile-call-btn" title="Llamar al taller" aria-label="Llamar al taller">
+            <svg viewBox="0 0 24 24" class="phone-svg" fill="currentColor">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </a>
         </div>
+
+        <!-- Cabecera de Escritorio (Oculta en móvil) -->
+        <div class="desktop-header-only">
+          <div class="header-inner">
+            <!-- Bloque del Logotipo Réplica Rótulo Real (Pulido sin iconos externos) -->
+            <a href="/" class="logo-link" title="Inicio - Carrocerías Los Ángeles">
+              <div class="logo-block">
+                <div class="logo-top-row">
+                  <div class="banner-divided">
+                    <span class="banner-text">Carrocerías</span>
+                  </div>
+                </div>
+                <div class="logo-bottom-row">
+                  <span class="logo-main-title">LOS ANGELES</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Subtítulo de Solera del Taller -->
+            <p class="tagline">{negocio.eslogan}</p>
+          </div>
+        </div>
+
+        <!-- Menú Desplegable de Navegación Móvil (Despliega desde la izquierda) -->
+        <nav id="mobile-nav" class="mobile-nav-menu" aria-expanded="false">
+          <ul>
+            <li><a href="/" class="mobile-nav-item">INICIO</a></li>
+            <li><a href="/#oficio" class="mobile-nav-item">EL OFICIO</a></li>
+            <li><a href="/#comparativa" class="mobile-nav-item">BATIR VS SOLDAR</a></li>
+            <li><a href="/#instalaciones" class="mobile-nav-item">EL TALLER</a></li>
+            <li><a href="/#clasicos" class="mobile-nav-item">RESTAURACIÓN</a></li>
+            <li><a href="/#trabajos" class="mobile-nav-item">TRABAJOS</a></li>
+            <li><a href="/#opiniones" class="mobile-nav-item">OPINIONES</a></li>
+            <li><a href="/#contacto" class="mobile-nav-item">CONTACTO</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navegación Industrial Desktop -->
+        <nav class="industrial-nav desktop-nav-only">
+          <ul>
+            <li><a href="/" class="nav-item">INICIO</a></li>
+            <li><a href="/#oficio" class="nav-item">EL OFICIO</a></li>
+            <li><a href="/#comparativa" class="nav-item">BATIR VS SOLDAR</a></li>
+            <li><a href="/#instalaciones" class="nav-item">EL TALLER</a></li>
+            <li><a href="/#clasicos" class="nav-item">RESTAURACIÓN</a></li>
+            <li><a href="/#trabajos" class="nav-item">TRABAJOS</a></li>
+            <li><a href="/#opiniones" class="nav-item">OPINIONES</a></li>
+            <li><a href="/#contacto" class="nav-item">CONTACTO</a></li>
+          </ul>
+        </nav>
       </header>
 
       <!-- Contenedor del Contenido Principal -->
@@ -120,7 +162,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
       </main>
     </div>
 
-    <!-- Pie de Página Industrial (Colocado fuera de page-wrapper para 100% ancho, pero con footer-inner centrado y con márgenes seguros) -->
+    <!-- Pie de Página Industrial (100% ancho, contenido centrado con padding) -->
     <footer class="main-footer">
       <div class="footer-inner">
         <div class="footer-grid">
@@ -165,6 +207,41 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
         </div>
       </div>
     </footer>
+
+    <!-- Script Inline para controlar el menú desplegable móvil -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        if (toggleBtn && mobileNav) {
+          toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = mobileNav.classList.toggle('active');
+            toggleBtn.classList.toggle('active');
+            mobileNav.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+
+          // Cerrar el menú al hacer clic en un enlace
+          mobileNav.querySelectorAll('.mobile-nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+              mobileNav.classList.remove('active');
+              toggleBtn.classList.remove('active');
+              mobileNav.setAttribute('aria-expanded', 'false');
+            });
+          });
+
+          // Cerrar al hacer clic fuera del menú
+          document.addEventListener('click', (e) => {
+            if (!mobileNav.contains(e.target) && !toggleBtn.contains(e.target)) {
+              mobileNav.classList.remove('active');
+              toggleBtn.classList.remove('active');
+              mobileNav.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
 
@@ -262,10 +339,9 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     }
   }
 
-  /* --- HEADER & REPLICACIÓN RÓTULO REAL (PULIDO SIN ICONOS) --- */
+  /* --- CABECERA DE ESCRITORIO --- */
   .main-header {
     padding: 30px 0 20px 0;
-    text-align: center;
     border-bottom: var(--border-width) solid var(--color-black);
     background-color: var(--color-bg);
   }
@@ -336,21 +412,6 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     text-shadow: 3px 3px 0px var(--color-black);
   }
 
-  @media (max-width: 600px) {
-    .banner-divided {
-      height: 42px;
-      padding: 0 35px;
-    }
-    .banner-text {
-      font-size: 1.8rem;
-    }
-    .logo-main-title {
-      font-size: 2.6rem;
-      -webkit-text-stroke: 1px var(--color-black);
-      text-shadow: 2px 2px 0px var(--color-black);
-    }
-  }
-
   /* Lema o Eslogan */
   .tagline {
     font-size: 0.95rem;
@@ -360,9 +421,151 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     color: var(--color-black);
     margin: 10px 0 20px 0;
     font-style: italic;
+    text-align: center;
   }
 
-  /* --- MENU DE NAVEGACION INDUSTRIAL --- */
+  /* --- BARRA DE CABECERA MÓVIL --- */
+  .mobile-header-bar {
+    display: none;
+    width: 100%;
+    height: 65px;
+    background-color: var(--color-bg);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 200;
+  }
+
+  /* Botón hamburguesa izquierdo */
+  .menu-toggle-btn {
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    position: relative;
+  }
+
+  .hamburger-line {
+    width: 26px;
+    height: 3px;
+    background-color: var(--color-black);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  /* Animación del hamburguesa a X */
+  .menu-toggle-btn.active .line-1 {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle-btn.active .line-2 {
+    opacity: 0;
+  }
+
+  .menu-toggle-btn.active .line-3 {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  /* Logotipo centrado en móvil */
+  .mobile-logo-link {
+    color: inherit;
+    display: block;
+  }
+
+  .mobile-logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 0.9;
+  }
+
+  .mobile-logo-carr {
+    font-family: var(--font-logo);
+    color: var(--color-red);
+    font-size: 1.3rem;
+    transform: skewX(-6deg);
+    font-weight: normal;
+  }
+
+  .mobile-logo-la {
+    font-family: var(--font-title);
+    color: var(--color-black);
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Botón llamar derecho */
+  .mobile-call-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-red);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .phone-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* --- MENÚ DESPLEGABLE MÓVIL (DESDE LA IZQUIERDA) --- */
+  .mobile-nav-menu {
+    position: fixed;
+    top: 77px; /* 65px header + 12px faja industrial */
+    left: 0;
+    width: 280px;
+    height: calc(100vh - 77px);
+    background-color: var(--color-black);
+    border-right: var(--border-width) solid var(--color-red);
+    transform: translateX(-105%);
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-menu ul {
+    list-style: none;
+    padding: 20px 0;
+  }
+
+  .mobile-nav-menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-nav-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav-item {
+    display: block;
+    padding: 14px 24px;
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    letter-spacing: 0.05em;
+    color: var(--color-bg);
+  }
+
+  .mobile-nav-item:hover, .mobile-nav-item:focus {
+    background-color: var(--color-red);
+    color: #FFFFFF;
+  }
+
+  /* --- MENU DE NAVEGACION INDUSTRIAL ESCRITORIO --- */
   .industrial-nav {
     display: inline-block;
     width: 100%;
@@ -402,29 +605,35 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     color: var(--color-yellow);
   }
 
-  @media (max-width: 800px) {
-    .industrial-nav ul {
-      border: var(--border-width) solid var(--color-black);
+  /* --- RESPONSIVE CONTROLS (MOBILE VS DESKTOP) --- */
+  @media (max-width: 768px) {
+    .main-header {
+      padding: 0;
+      border-bottom: var(--border-width) solid var(--color-black);
     }
-    .nav-item {
-      padding: 10px 14px;
-      font-size: 1rem;
+    .mobile-header-bar {
+      display: flex;
+    }
+    .desktop-header-only {
+      display: none;
+    }
+    .desktop-nav-only {
+      display: none;
     }
   }
 
-  @media (max-width: 600px) {
-    .industrial-nav ul {
-      flex-direction: column;
+  @media (min-width: 769px) {
+    .mobile-header-bar {
+      display: none;
     }
-    .industrial-nav li {
-      border-right: none;
-      border-bottom: var(--border-width) solid var(--color-black);
+    .desktop-header-only {
+      display: block;
     }
-    .industrial-nav li:last-child {
-      border-bottom: none;
+    .desktop-nav-only {
+      display: block;
     }
-    .nav-item {
-      padding: 12px;
+    .mobile-nav-menu {
+      display: none;
     }
   }
 
@@ -434,7 +643,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     padding: 40px 0;
   }
 
-  /* --- FOOTER PESADO E INDUSTRIAL (100% ancho con espaciado de seguridad) --- */
+  /* --- FOOTER PESADO E INDUSTRIAL --- */
   .main-footer {
     background-color: var(--color-black);
     color: var(--color-bg);
@@ -447,7 +656,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
   .footer-inner {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 24px; /* Evita que las letras queden pegadas al borde izquierdo */
+    padding: 0 24px;
   }
 
   .footer-grid {
