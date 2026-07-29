@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { negocio } from '../data/negocio';
+---
+
+<Layout title="Política de Privacidad - Carrocerías Los Ángeles" description="Política de privacidad y protección de datos de carácter personal de Carrocerías Los Ángeles.">
+  <section class="legal-section">
+    <h1 class="page-title">POLÍTICA DE PRIVACIDAD</h1>
+    <div class="title-underline"></div>
+    
+    <div class="legal-content">
+      <h2>1. RESPONSABLE DEL TRATAMIENTO</h2>
+      <p>
+        El responsable del tratamiento de los datos recabados en esta web es:
+      </p>
+      <ul>
+        <li><strong>Identidad:</strong> {negocio.nombre}</li>
+        <li><strong>Dirección:</strong> {negocio.direccion}, {negocio.cp}, {negocio.ciudad}, Asturias</li>
+        <li><strong>Correo electrónico:</strong> {negocio.email}</li>
+        <li><strong>Teléfono:</strong> {negocio.telefono}</li>
+      </ul>
+
+      <h2>2. FINALIDAD DEL TRATAMIENTO DE LOS DATOS</h2>
+      <p>
+        En nuestra web no recogemos datos a través de formularios automáticos de suscripción ni de bases de datos persistentes. La única recopilación de datos se efectúa cuando el usuario decide enviarnos un correo electrónico o llamarnos por teléfono utilizando los enlaces directos habilitados.
+      </p>
+      <p>
+        La finalidad del tratamiento de estos datos es exclusivamente:
+      </p>
+      <ul>
+        <li>Atender y resolver las consultas, dudas o solicitudes de presupuesto enviadas por el usuario.</li>
+        <li>Mantener la comunicación comercial y operativa relativa a los trabajos de reparación de carrocerías encargados por el cliente.</li>
+      </ul>
+
+      <h2>3. LEGITIMACIÓN</h2>
+      <p>
+        La base legal para el tratamiento de sus datos es el **consentimiento del interesado** al ponerse en contacto directo con nosotros vía telefónica o por correo electrónico, así como la **relación contractual o precontractual** que se establece para la elaboración de presupuestos o ejecución de reparaciones.
+      </p>
+
+      <h2>4. PLAZO DE CONSERVACIÓN DE LOS DATOS</h2>
+      <p>
+        Los datos proporcionados se conservarán durante el tiempo estrictamente necesario para atender su consulta o solicitud de presupuesto, o mientras se mantenga la relación comercial de los trabajos contratados. Posteriormente, se conservarán durante los plazos legalmente exigidos en materia tributaria y mercantil.
+      </p>
+
+      <h2>5. DESTINATARIOS DE LOS DATOS</h2>
+      <p>
+        No se cederán datos a terceros salvo obligación legal expresa.
+      </p>
+
+      <h2>6. DERECHOS DE LOS USUARIOS</h2>
+      <p>
+        El usuario tiene derecho a obtener confirmación sobre si en {negocio.nombre} estamos tratando datos personales que les conciernan o no. Las personas interesadas tienen derecho a:
+      </p>
+      <ul>
+        <li>Acceder a sus datos personales.</li>
+        <li>Solicitar la rectificación de los datos inexactos.</li>
+        <li>Solicitar su supresión cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.</li>
+        <li>Solicitar la limitación de su tratamiento, en cuyo caso únicamente se conservarán para el ejercicio o la defensa de reclamaciones.</li>
+        <li>Oponerse al tratamiento de sus datos.</li>
+      </ul>
+      <p>
+        Para ejercitar estos derechos, puede dirigir una comunicación escrita acompañada de copia de su documento de identidad a la dirección de correo electrónico: <a href={`mailto:${negocio.email}`} class="legal-link">{negocio.email}</a>.
+      </p>
+
+      <h2>7. SEGURIDAD DE LOS DATOS</h2>
+      <p>
+        {negocio.nombre} adopta las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos de carácter personal y evitar su alteración, pérdida, tratamiento o acceso no autorizado, de conformidad con lo establecido por el Reglamento General de Protección de Datos (RGPD).
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .legal-section {
+    padding: 20px 0 60px 0;
+  }
+
+  .page-title {
+    font-size: 3rem;
+    color: var(--color-black);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .title-underline {
+    height: 6px;
+    background-color: var(--color-red);
+    width: 80px;
+    border: 1.5px solid var(--color-black);
+    margin-bottom: 40px;
+  }
+
+  .legal-content {
+    background-color: white;
+    border: var(--border-width) solid var(--color-black);
+    padding: 40px;
+    max-width: 900px;
+  }
+
+  .legal-content h2 {
+    font-size: 1.4rem;
+    color: var(--color-red);
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: 4px;
+    display: inline-block;
+  }
+
+  .legal-content h2:first-of-type {
+    margin-top: 0;
+  }
+
+  .legal-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-black);
+    margin-bottom: 15px;
+  }
+
+  .legal-content ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  .legal-content li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .legal-link {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .legal-content {
+      padding: 20px;
+    }
+    .page-title {
+      font-size: 2.2rem;
+    }
+  }
+</style>

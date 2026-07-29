@@ -1,0 +1,1098 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { negocio } from '../data/negocio';
+---
+
+<Layout 
+  title="Chapista en Gijón | Restauración de Clásicos Asturias | Carrocerías Los Ángeles"
+  description="Taller tradicional de carrocería en Gijón desde 1970. Especialistas en chapa batida a mano, restauración de coches clásicos en Asturias y reparación de furgonetas."
+>
+  <!-- 1. HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text-block">
+        <span class="hero-badge">TRADICIÓN METALÚRGICA DESDE {negocio.fundacion}</span>
+        <h1 class="hero-title-main">EL ARTE DE DAR FORMA AL METAL CON MARTILLO Y TAS</h1>
+        <p class="hero-subtitle">
+          Recuperamos la carrocería original de su vehículo mediante conformado manual de la chapa, 
+          respetando el oficio tradicional y garantizando una reparación sólida de por vida.
+        </p>
+        
+        <div class="hero-cta-buttons">
+          <a href={`tel:${negocio.telefonoLink}`} class="btn-industrial btn-cta-phone">
+            LLAMAR AL {negocio.telefono}
+          </a>
+          <a href={`mailto:${negocio.email}`} class="btn-secondary btn-cta-email">
+            ENVIAR EMAIL
+          </a>
+        </div>
+      </div>
+
+      <!-- Foto de la nave industrial del taller -->
+      <div class="hero-image-wrapper">
+        <img 
+          src="/nave.jpg" 
+          alt="Fachada industrial del taller Carrocerías Los Ángeles en Gijón" 
+          class="hero-facade-img" 
+        />
+        <div class="image-caption">
+          Nave industrial en Gijón - Guillermo Marconi, 40 (Puente Seco)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. "CHAPISTA, CHAPISTA" SECTION -->
+  <section class="artisan-section" id="oficio">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">CHAPISTA, CHAPISTA</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="artisan-content-box">
+        <div class="text-content">
+          <p>
+            El verdadero oficio de chapista está desapareciendo. En la actualidad, la tendencia mayoritaria en los talleres de carrocería modernos es la sustitución rápida: cortar la sección dañada del coche, desecharla y atornillar o pegar una pieza de repuesto fabricada en serie. Se trabaja con prisa y bajo baremos temporales impuestos por aseguradoras.
+          </p>
+          <p>
+            En <strong>Carrocerías Los Ángeles</strong> mantenemos viva la esencia del chapista de los de antes: el artesano que entiende la elasticidad del acero, que lee las tensiones acumuladas en la chapa tras una colisión y que sabe con precisión milimétrica dónde golpear para devolver el metal a su estado original sin debilitarlo.
+          </p>
+          <p>
+            Trabajamos sin prisas artificiales, escuchando el metal en el yunque y utilizando herramientas tradicionales —el martillo de carrocero, el tas de mano y la lima de repasar— para que la chapa recupere su curvatura original. Es un oficio noble, de paciencia y oído, que asegura que su vehículo conserve su integridad estructural original.
+          </p>
+        </div>
+
+        <!-- Contenedor del placeholder de historia solicitado -->
+        <div class="history-placeholder-box">
+          <span class="placeholder-tag">DOCUMENTACIÓN EN CURSO</span>
+          <div class="placeholder-text-inner">
+            [PENDIENTE: texto de la historia del oficio]
+          </div>
+          <p class="placeholder-note">
+            Este espacio está reservado para la incorporación del texto histórico detallado sobre la trayectoria y evolución de las técnicas de conformado manual en nuestro taller de Roces.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CORTAR Y SOLDAR VS. BATIR LA CHAPA SECTION -->
+  <section class="comparison-section" id="comparativa">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">CORTAR Y SOLDAR VS. BATIR LA CHAPA</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="comparison-grid">
+        <!-- Columna Cortar y Soldar -->
+        <div class="comparison-card card-welding">
+          <div class="card-header-badge welding-badge">Sustitución y Soldadura</div>
+          <h3 class="comparison-card-title">Cortar y Soldar</h3>
+          <p class="comparison-intro">La práctica habitual y automatizada de los talleres de sustitución rápida.</p>
+          
+          <ul class="comparison-points">
+            <li>
+              <strong>Puntos de unión vulnerables:</strong> Al cortar una sección de carrocería y soldar una nueva pieza, se generan costuras térmicas artificiales a lo largo de la estructura.
+            </li>
+            <li>
+              <strong>Entrada de humedad y óxido:</strong> La soldadura crea microporosidades internas que son extremadamente difíciles de sellar por completo. Con los años, la condensación y la humedad penetran por estos poros, provocando óxido interno que destruye la pintura.
+            </li>
+            <li>
+              <strong>Alteración térmica del metal:</strong> Las altas temperaturas del soplete o soldadora alteran la templabilidad y la resistencia del acero de fábrica, debilitando su elasticidad estructural en caso de futuros impactos.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna Batir la Chapa -->
+        <div class="comparison-card card-beating">
+          <div class="card-header-badge beating-badge">Conformado Artesanal</div>
+          <h3 class="comparison-card-title">Batir la Chapa a Mano</h3>
+          <p class="comparison-intro">Nuestra especialidad tradicional: recuperar la pieza original sin alterar su estructura.</p>
+          
+          <ul class="comparison-points">
+            <li>
+              <strong>Continuidad estructural intacta:</strong> Trabajamos directamente sobre la chapa original del coche. Al no realizar cortes ni soldar parches metálicos, la pieza mantiene su solidez física de una sola pieza.
+            </li>
+            <li>
+              <strong>Sin focos de corrosión futura:</strong> Al evitar las costuras soldadas, no se abren microporosidades en el metal. La chapa conserva su protección anticorrosiva original de fábrica, eliminando la aparición de óxido interno con los años.
+            </li>
+            <li>
+              <strong>Conservación del temple de fábrica:</strong> Mediante golpes fríos y precisos con martillo y tas, el acero recupera su memoria de forma original sin sufrir el estrés térmico de la soldadura, manteniendo su flexibilidad intacta.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Placeholder para texto detallado comparativo -->
+      <div class="comparison-placeholder-box">
+        <div class="placeholder-text-inner">
+          [PENDIENTE: texto comparativo detallado]
+        </div>
+        <p class="placeholder-note">
+          Sección reservada para añadir la ampliación de datos técnicos comparativos entre soldadura MIG/MAG y la técnica de recuperación de chapas bajo tensión por estirado en frío.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. RESTAURACIÓN DE CLÁSICOS SECTION -->
+  <section class="classics-section" id="clasicos">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">RESTAURACIÓN DE VEHÍCULOS CLÁSICOS</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="classics-layout">
+        <div class="classics-text">
+          <p>
+            La restauración de un coche clásico o histórico es la prueba de fuego de cualquier chapista. A diferencia de los vehículos modernos, **los paneles de recambio para coches antiguos dejaron de fabricarse hace décadas**. Si una aleta, un capó o un estribo están carcomidos por el óxido o deformados por un siniestro, no existe la opción de pedir un repuesto a fábrica.
+          </p>
+          <p>
+            En estos casos, **restaurar exige obligatoriamente batir la chapa**. Reconstruimos paneles inexistentes desde cero utilizando láminas de acero dulce, dándoles forma a mano sobre el yunque para que encajen a la perfección con las líneas originales del coche. Este trabajo requiere un conocimiento profundo de la metalurgia histórica, paciencia y un absoluto respeto por el diseño original.
+          </p>
+          <p class="classics-highlight">
+            Técnicas de los años 70 aplicadas a vehículos que hicieron historia, garantizando que sigan rodando con su chapa original.
+          </p>
+        </div>
+
+        <!-- Galería de clásicos -->
+        <div class="classics-gallery">
+          <div class="gallery-item">
+            <img src="/clasico1.jpg" alt="Coche clásico español Seat 600 bajo restauración en el taller" />
+            <div class="gallery-caption">
+              Restauración estructural de carrocería en Seat 600.
+              <span class="gallery-placeholder-tag">[sustituir por fotos reales]</span>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/clasico2.jpg" alt="Conformado manual de chapa para vehículo clásico" />
+            <div class="gallery-caption">
+              Modelado de paneles laterales a golpe de martillo y tas.
+              <span class="gallery-placeholder-tag">[sustituir por fotos reales]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TRABAJOS SECTION (ANTES / DESPUÉS) -->
+  <section class="work-gallery-section" id="trabajos">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">TRABAJOS (ANTES / DESPUÉS)</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <p class="section-intro-text">
+        Muestra visual del conformado manual y pintura de vehículos. A continuación se presentan ejemplos ilustrativos de reparaciones de carrocería complejas sin sustitución de pieza.
+      </p>
+
+      <div class="works-grid">
+        <!-- Par 1 -->
+        <div class="work-pair-card">
+          <div class="work-info">
+            <span class="work-index">PROYECTO 01</span>
+            <h3 class="work-title">Aleta Trasera - Seat 850 (1973)</h3>
+          </div>
+          <div class="pair-visual">
+            <div class="visual-panel panel-before">
+              <div class="panel-tag">ANTES</div>
+              <div class="panel-placeholder-content">
+                <span class="icon">⚠</span>
+                <span class="text">[Marcador de posición - Antes de restauración de óxido y conformado a mano]</span>
+              </div>
+            </div>
+            <div class="visual-panel panel-after">
+              <div class="panel-tag tag-after">DESPUÉS</div>
+              <div class="panel-placeholder-content">
+                <span class="icon">✔</span>
+                <span class="text">[Marcador de posición - Chapa batida recuperada y pintada al horno]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Par 2 -->
+        <div class="work-pair-card">
+          <div class="work-info">
+            <span class="work-index">PROYECTO 02</span>
+            <h3 class="work-title">Capó Delantero - Citroën 2CV (1968)</h3>
+          </div>
+          <div class="pair-visual">
+            <div class="visual-panel panel-before">
+              <div class="panel-tag">ANTES</div>
+              <div class="panel-placeholder-content">
+                <span class="icon">⚠</span>
+                <span class="text">[Marcador de posición - Deformación por impacto frontal y pliegues marcados]</span>
+              </div>
+            </div>
+            <div class="visual-panel panel-after">
+              <div class="panel-tag tag-after">DESPUÉS</div>
+              <div class="panel-placeholder-content">
+                <span class="icon">✔</span>
+                <span class="text">[Marcador de posición - Alisado en frío sin aporte de masilla plástica]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Par 3 -->
+        <div class="work-pair-card">
+          <div class="work-info">
+            <span class="work-index">PROYECTO 03</span>
+            <h3 class="work-title">Lateral y Puerta - Furgoneta Industrial</h3>
+          </div>
+          <div class="pair-visual">
+            <div class="visual-panel panel-before">
+              <div class="panel-tag">ANTES</div>
+              <div class="panel-placeholder-content">
+                <span class="icon">⚠</span>
+                <span class="text">[Marcador de posición - Hundimiento lateral por roce en columna de garaje]</span>
+              </div>
+            </div>
+            <div class="visual-panel panel-after">
+              <div class="panel-tag tag-after">DESPUÉS</div>
+              <div class="panel-placeholder-content">
+                <span class="icon">✔</span>
+                <span class="text">[Marcador de posición - Conformado de nervios estructurales y pintado completo]</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. RESEÑAS SECTION -->
+  <section class="reviews-section" id="opiniones">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">OPINIONES DE NUESTROS CLIENTES</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Reseña 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <span class="client-name">Manuel S.</span>
+            <span class="client-city">Gijón</span>
+          </div>
+          <blockquote class="review-body">
+            "Llevé mi coche clásico con un golpe en la aleta trasera que en otros talleres daban por irreparable o exigían cortar chapa. Aquí la devolvieron a su forma original sin cambiar la pieza. Trabajo impecable de los que ya no quedan."
+          </blockquote>
+          <div class="review-placeholder-tag">[Sustituir por opinión real de cliente si se desea]</div>
+        </div>
+
+        <!-- Reseña 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <span class="client-name">José Antonio G.</span>
+            <span class="client-city">Gijón</span>
+          </div>
+          <blockquote class="review-body">
+            "Taller honesto y profesional. Te explican el trabajo de chapa batida con detalle y el acabado de la pintura al horno es idéntico al color original. Muy recomendable para vehículos industriales también."
+          </blockquote>
+          <div class="review-placeholder-tag">[Sustituir por opinión real de cliente si se desea]</div>
+        </div>
+
+        <!-- Reseña 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <span class="client-name">Covadonga M.</span>
+            <span class="client-city">Oviedo</span>
+          </div>
+          <blockquote class="review-body">
+            "El trato es excelente y el trabajo en el metal es pura artesanía. Se nota la experiencia de décadas en el sector. Sin duda, el taller de confianza en Asturias para reparar la carrocería."
+          </blockquote>
+          <div class="review-placeholder-tag">[Sustituir por opinión real de cliente si se desea]</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. UBICACIÓN Y CONTACTO SECTION -->
+  <section class="contact-location-section" id="contacto">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">UBICACIÓN Y CONTACTO</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="contact-location-grid">
+        
+        <!-- Datos de contacto e industriales -->
+        <div class="contact-details-box">
+          <h3 class="contact-box-title">TALLER CARROCERÍAS LOS ÁNGELES</h3>
+          <p class="contact-box-desc">
+            Venga a visitarnos para valorar el estado de su vehículo y facilitarle un presupuesto honesto adaptado a las necesidades de la chapa.
+          </p>
+
+          <div class="info-blocks-stack">
+            <div class="info-block-item">
+              <span class="block-label">Dirección física</span>
+              <span class="block-value">{negocio.direccion}</span>
+              <span class="block-subvalue">{negocio.cp} · {negocio.ciudad} (Polígono de Roces – Puente Seco)</span>
+            </div>
+
+            <div class="info-block-item">
+              <span class="block-label">Teléfono de atención</span>
+              <a href={`tel:${negocio.telefonoLink}`} class="phone-highlight-link">
+                {negocio.telefono}
+              </a>
+            </div>
+
+            <div class="info-block-item">
+              <span class="block-label">Correo electrónico</span>
+              <a href={`mailto:${negocio.email}`} class="email-highlight-link">
+                {negocio.email}
+              </a>
+            </div>
+
+            <div class="info-block-item">
+              <span class="block-label">Horario de apertura</span>
+              <span class="block-value">Lunes a Viernes: 08:30 - 13:30 y 15:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mapa Embebido -->
+        <div class="map-embed-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2892.4828131379374!2d-5.6706706!3d43.5131551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd367b0aa9cf63ef%3A0xe541ad90f3844f2d!2sCalle%20Guillermo%20Marconi%2C%2040%2C%2033211%20Gij%C3%B3n%2C%20Asturias!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Carrocerías Los Ángeles en Gijón"
+            class="google-map-iframe"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* --- ESTILOS DE LA PÁGINA --- */
+  .section-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    color: var(--color-black);
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .title-underline {
+    height: 6px;
+    background-color: var(--color-red);
+    width: 80px;
+    border: 1.5px solid var(--color-black);
+  }
+
+  /* --- 1. HERO --- */
+  .hero-section {
+    padding: 20px 0 50px 0;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    background-color: var(--color-black);
+    color: var(--color-bg);
+    border: var(--border-width) solid var(--color-red);
+    padding: 50px;
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      padding: 30px 20px;
+    }
+  }
+
+  .hero-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-badge {
+    background-color: var(--color-red);
+    color: white;
+    font-family: var(--font-title);
+    padding: 4px 15px;
+    border: var(--border-width) solid var(--color-bg);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+  }
+
+  .hero-title-main {
+    color: var(--color-yellow);
+    font-size: 2.8rem;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #DDDDDD;
+  }
+
+  .hero-cta-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .btn-cta-phone {
+    flex-grow: 1;
+    font-size: 1.2rem;
+    padding: 14px 20px;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-bg);
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    padding: 14px 30px;
+    border: var(--border-width) solid var(--color-bg);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.1s steps(2), color 0.1s steps(2);
+    flex-grow: 1;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-bg);
+    color: var(--color-black);
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+    border: var(--border-width) solid var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-black);
+  }
+
+  .hero-facade-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 16/9;
+  }
+
+  .image-caption {
+    font-family: var(--font-title);
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+    text-align: center;
+    padding: 10px;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    border-top: var(--border-width) solid var(--color-bg);
+  }
+
+  /* --- 2. CHAPISTA CHAPISTA --- */
+  .artisan-section {
+    padding: 50px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .artisan-content-box {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+  }
+
+  @media (max-width: 850px) {
+    .artisan-content-box {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  .text-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .text-content strong {
+    color: var(--color-red);
+  }
+
+  .history-placeholder-box {
+    background-color: white;
+    border: var(--border-width) dashed var(--color-black);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .placeholder-tag {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    font-family: var(--font-title);
+    padding: 3px 10px;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    border: 1.5px solid var(--color-black);
+    margin-bottom: 15px;
+  }
+
+  .placeholder-text-inner {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--color-red);
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .placeholder-note {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555555;
+    margin: 0;
+  }
+
+  /* --- 3. COMPARATIVA --- */
+  .comparison-section {
+    padding: 50px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  }
+
+  .comparison-card {
+    background-color: white;
+    border: var(--border-width) solid var(--color-black);
+    padding: 35px;
+    position: relative;
+  }
+
+  .card-header-badge {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    font-family: var(--font-title);
+    padding: 3px 12px;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--color-black);
+  }
+
+  .welding-badge {
+    background-color: #E2E2E2;
+    color: var(--color-black);
+  }
+
+  .beating-badge {
+    background-color: var(--color-red);
+    color: white;
+  }
+
+  .comparison-card-title {
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+    font-weight: normal;
+    color: var(--color-black);
+  }
+
+  .card-beating .comparison-card-title {
+    color: var(--color-red);
+  }
+
+  .comparison-intro {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 25px;
+    border-bottom: 1.5px solid #EEEEEE;
+    padding-bottom: 12px;
+  }
+
+  .comparison-points {
+    list-style: none;
+  }
+
+  .comparison-points li {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .comparison-points li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.75rem;
+  }
+
+  .card-welding .comparison-points li::before {
+    color: var(--color-black);
+  }
+
+  .card-beating .comparison-points li::before {
+    color: var(--color-red);
+  }
+
+  .comparison-placeholder-box {
+    margin-top: 30px;
+    background-color: rgba(26, 26, 26, 0.03);
+    border: 2px dashed rgba(26, 26, 26, 0.3);
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* --- 4. RESTAURACIÓN --- */
+  .classics-section {
+    padding: 50px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .classics-layout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  @media (max-width: 850px) {
+    .classics-layout {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  .classics-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .classics-highlight {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--color-red);
+    line-height: 1.3;
+    border-left: 4px solid var(--color-black);
+    padding-left: 15px;
+    margin-top: 25px;
+  }
+
+  .classics-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .classics-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .gallery-item {
+    border: var(--border-width) solid var(--color-black);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    display: block;
+    border-bottom: var(--border-width) solid var(--color-black);
+  }
+
+  .gallery-caption {
+    padding: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--color-black);
+    font-weight: 500;
+  }
+
+  .gallery-placeholder-tag {
+    display: block;
+    margin-top: 6px;
+    font-family: var(--font-title);
+    color: var(--color-red);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* --- 5. TRABAJOS --- */
+  .work-gallery-section {
+    padding: 50px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .section-intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    max-width: 800px;
+  }
+
+  .works-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .work-pair-card {
+    background-color: white;
+    border: var(--border-width) solid var(--color-black);
+    padding: 30px;
+  }
+
+  .work-info {
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .work-index {
+    background-color: var(--color-black);
+    color: var(--color-yellow);
+    font-family: var(--font-title);
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+  }
+
+  .work-title {
+    font-size: 1.4rem;
+    color: var(--color-black);
+    font-weight: normal;
+  }
+
+  .pair-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .pair-visual {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+
+  .visual-panel {
+    border: 2px dashed rgba(26, 26, 26, 0.4);
+    background-color: var(--color-bg);
+    min-height: 160px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .panel-tag {
+    align-self: flex-start;
+    background-color: var(--color-black);
+    color: white;
+    font-family: var(--font-title);
+    font-size: 0.85rem;
+    padding: 2px 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .tag-after {
+    background-color: var(--color-red);
+  }
+
+  .panel-placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1;
+    margin-top: 10px;
+  }
+
+  .panel-placeholder-content .icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .panel-before .icon {
+    color: var(--color-red);
+  }
+
+  .panel-after .icon {
+    color: #2E7D32;
+  }
+
+  .panel-placeholder-content .text {
+    font-family: var(--font-title);
+    font-size: 1.05rem;
+    color: #444444;
+    line-height: 1.3;
+    text-transform: uppercase;
+    max-width: 320px;
+  }
+
+  /* --- 6. RESEÑAS --- */
+  .reviews-section {
+    padding: 50px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  @media (max-width: 850px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  .review-card {
+    background-color: white;
+    border: var(--border-width) solid var(--color-black);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .review-header {
+    border-bottom: 2px solid var(--color-red);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .client-name {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    color: var(--color-black);
+  }
+
+  .client-city {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666666;
+  }
+
+  .review-body {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333333;
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+    quotes: "“" "”" "‘" "’";
+  }
+
+  .review-body::before {
+    content: open-quote;
+    font-size: 2.5rem;
+    color: var(--color-red);
+    line-height: 0;
+    vertical-align: -0.4em;
+    font-family: Georgia, serif;
+  }
+
+  .review-body::after {
+    content: close-quote;
+    font-size: 2.5rem;
+    color: var(--color-red);
+    line-height: 0;
+    vertical-align: -0.4em;
+    font-family: Georgia, serif;
+  }
+
+  .review-placeholder-tag {
+    font-family: var(--font-title);
+    font-size: 0.8rem;
+    color: var(--color-red);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-top: 1px dashed #DDDDDD;
+    padding-top: 10px;
+  }
+
+  /* --- 7. UBICACIÓN Y CONTACTO --- */
+  .contact-location-section {
+    padding: 50px 0 20px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .contact-location-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 35px;
+  }
+
+  @media (max-width: 900px) {
+    .contact-location-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-details-box {
+    background-color: white;
+    border: var(--border-width) solid var(--color-black);
+    padding: 40px;
+  }
+
+  .contact-box-title {
+    font-size: 1.6rem;
+    color: var(--color-red);
+    margin-bottom: 12px;
+    font-weight: normal;
+  }
+
+  .contact-box-desc {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    color: #444444;
+  }
+
+  .info-blocks-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-block-item {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--color-black);
+    padding-left: 15px;
+  }
+
+  .block-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #666666;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .block-value {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    color: var(--color-black);
+    line-height: 1.2;
+  }
+
+  .block-subvalue {
+    font-size: 0.95rem;
+    color: #444444;
+    margin-top: 2px;
+  }
+
+  .phone-highlight-link {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--color-red);
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+
+  .phone-highlight-link:hover {
+    color: var(--color-black);
+  }
+
+  .email-highlight-link {
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: var(--color-black);
+    text-decoration: underline;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+  }
+
+  .email-highlight-link:hover {
+    color: var(--color-red);
+  }
+
+  .map-embed-wrapper {
+    border: var(--border-width) solid var(--color-black);
+    background-color: var(--color-bg);
+    min-height: 380px;
+    position: relative;
+    width: 100%;
+  }
+
+  .google-map-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+  }
+</style>
