@@ -118,53 +118,53 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
       <main class="main-content">
         <slot />
       </main>
+    </div>
 
-      <!-- Pie de Página Industrial -->
-      <footer class="main-footer">
-        <div class="footer-inner">
-          <div class="footer-grid">
-            <!-- Columna 1: Contacto -->
-            <div class="footer-col">
-              <span class="footer-title">CONTACTO</span>
-              <div class="contact-details">
-                <p class="phone-block">
-                  <span class="label">Teléfono:</span>
-                  <a href={`tel:${negocio.telefonoLink}`} class="phone-link">{negocio.telefono}</a>
-                </p>
-                <p>
-                  <span class="label">Email:</span> 
-                  <a href={`mailto:${negocio.email}`} class="email-link">{negocio.email}</a>
-                </p>
-              </div>
-            </div>
-
-            <!-- Columna 2: Ubicación física -->
-            <div class="footer-col">
-              <span class="footer-title">UBICACIÓN</span>
-              <address class="address-block">
-                <p>{negocio.direccion}</p>
-                <p>{negocio.cp} · {negocio.ciudad}, Asturias</p>
-              </address>
-            </div>
-
-            <!-- Columna 3: Enlaces de interés legal -->
-            <div class="footer-col">
-              <span class="footer-title">DOCUMENTACIÓN</span>
-              <ul class="legal-links-list">
-                <li><a href="/aviso-legal">Aviso Legal</a></li>
-                <li><a href="/privacidad">Política de Privacidad</a></li>
-              </ul>
-              <p class="since-block">Tradición metálica en Gijón desde {negocio.fundacion}.</p>
+    <!-- Pie de Página Industrial (Colocado fuera de page-wrapper para 100% ancho, pero con footer-inner centrado y con márgenes seguros) -->
+    <footer class="main-footer">
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <!-- Columna 1: Contacto -->
+          <div class="footer-col">
+            <span class="footer-title">CONTACTO</span>
+            <div class="contact-details">
+              <p class="phone-block">
+                <span class="label">Teléfono:</span>
+                <a href={`tel:${negocio.telefonoLink}`} class="phone-link">{negocio.telefono}</a>
+              </p>
+              <p>
+                <span class="label">Email:</span> 
+                <a href={`mailto:${negocio.email}`} class="email-link">{negocio.email}</a>
+              </p>
             </div>
           </div>
 
-          <div class="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} {negocio.nombre}. Todos los derechos reservados.</p>
-            <p class="tag-engineering">GIJÓN · PRINCIPADO DE ASTURIAS</p>
+          <!-- Columna 2: Ubicación física -->
+          <div class="footer-col">
+            <span class="footer-title">UBICACIÓN</span>
+            <address class="address-block">
+              <p>{negocio.direccion}</p>
+              <p>{negocio.cp} · {negocio.ciudad}, Asturias</p>
+            </address>
+          </div>
+
+          <!-- Columna 3: Enlaces de interés legal -->
+          <div class="footer-col">
+            <span class="footer-title">DOCUMENTACIÓN</span>
+            <ul class="legal-links-list">
+              <li><a href="/aviso-legal">Aviso Legal</a></li>
+              <li><a href="/privacidad">Política de Privacidad</a></li>
+            </ul>
+            <p class="since-block">Tradición metálica en Gijón desde {negocio.fundacion}.</p>
           </div>
         </div>
-      </footer>
-    </div>
+
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} {negocio.nombre}. Todos los derechos reservados.</p>
+          <p class="tag-engineering">GIJÓN · PRINCIPADO DE ASTURIAS</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
 
@@ -434,31 +434,37 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     padding: 40px 0;
   }
 
-  /* --- FOOTER PESADO E INDUSTRIAL --- */
+  /* --- FOOTER PESADO E INDUSTRIAL (100% ancho con espaciado de seguridad) --- */
   .main-footer {
     background-color: var(--color-black);
     color: var(--color-bg);
     border-top: var(--border-width) solid var(--color-red);
-    padding: 45px 0 25px 0;
+    padding: 55px 0 35px 0;
     margin-top: auto;
+    width: 100%;
   }
 
   .footer-inner {
-    max-width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px; /* Evita que las letras queden pegadas al borde izquierdo */
   }
 
   .footer-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding-bottom: 35px;
+    gap: 40px;
+    padding-bottom: 45px;
     border-bottom: 2px solid rgba(247, 244, 239, 0.15);
   }
 
   @media (max-width: 768px) {
     .footer-grid {
       grid-template-columns: 1fr;
-      gap: 25px;
+      gap: 30px;
+    }
+    .footer-inner {
+      padding: 0 20px;
     }
   }
 
@@ -549,10 +555,10 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 20px;
-    font-size: 0.8rem;
+    padding-top: 25px;
+    font-size: 0.85rem;
     color: #888888;
-    gap: 10px;
+    gap: 15px;
   }
 
   .tag-engineering {

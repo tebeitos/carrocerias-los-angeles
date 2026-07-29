@@ -215,21 +215,20 @@ import { negocio } from '../data/negocio';
           </p>
         </div>
 
-        <!-- Galería de clásicos -->
+        <!-- Galería de clásicos (Espacio reservado con placeholders limpios para futuras fotos reales) -->
         <div class="classics-gallery">
-          <div class="gallery-item">
-            <img src="/clasico1.jpg" alt="Coche clásico español Seat 600 bajo restauración en el taller" />
-            <div class="gallery-caption">
-              Restauración estructural de carrocería en Seat 600.
-              <span class="gallery-placeholder-tag">[sustituir por fotos reales]</span>
-            </div>
+          <div class="classic-photo-placeholder">
+            <span class="placeholder-tag-classic">Restauración Terminado</span>
+            <div class="placeholder-icon-classic">📷</div>
+            <div class="placeholder-text-classic">[FOTO VEHÍCULO FINALIZADO]</div>
+            <p class="placeholder-desc-classic">Espacio para foto real de coche restaurado. Guardar imagen como: <code>public/clasico1.jpg</code></p>
           </div>
-          <div class="gallery-item">
-            <img src="/clasico2.jpg" alt="Conformado manual de chapa para vehículo clásico" />
-            <div class="gallery-caption">
-              Modelado de paneles laterales a golpe de martillo y tas.
-              <span class="gallery-placeholder-tag">[sustituir por fotos reales]</span>
-            </div>
+          
+          <div class="classic-photo-placeholder">
+            <span class="placeholder-tag-classic">Proceso Chapa</span>
+            <div class="placeholder-icon-classic">🛠</div>
+            <div class="placeholder-text-classic">[FOTO PANEL CONFORMADO]</div>
+            <p class="placeholder-desc-classic">Espacio para foto real del trabajo a mano. Guardar imagen como: <code>public/clasico2.jpg</code></p>
           </div>
         </div>
       </div>
@@ -823,7 +822,7 @@ import { negocio } from '../data/negocio';
     margin: 0;
   }
 
-  /* --- 5. RESTAURACIÓN --- */
+  /* --- 5. RESTAURACIÓN (PLACEHOLDERS DE FOTOS REALES) --- */
   .classics-section {
     padding: 50px 0;
     border-top: var(--border-width) solid var(--color-black);
@@ -872,37 +871,59 @@ import { negocio } from '../data/negocio';
     }
   }
 
-  .gallery-item {
-    border: var(--border-width) solid var(--color-black);
+  .classic-photo-placeholder {
+    border: var(--border-width) dashed var(--color-black);
     background-color: white;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     aspect-ratio: 4/3;
-    display: block;
-    border-bottom: var(--border-width) solid var(--color-black);
+    position: relative;
   }
 
-  .gallery-caption {
-    padding: 12px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--color-black);
-    font-weight: 500;
-  }
-
-  .gallery-placeholder-tag {
-    display: block;
-    margin-top: 6px;
+  .placeholder-tag-classic {
+    position: absolute;
+    top: 15px;
+    background-color: var(--color-black);
+    color: white;
     font-family: var(--font-title);
-    color: var(--color-red);
     font-size: 0.8rem;
+    padding: 1px 8px;
     letter-spacing: 0.05em;
+  }
+
+  .placeholder-icon-classic {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    line-height: 1;
+    color: var(--color-red);
+  }
+
+  .placeholder-text-classic {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    color: var(--color-black);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  .placeholder-desc-classic {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #666666;
+    margin: 0;
+    max-width: 210px;
+  }
+
+  .placeholder-desc-classic code {
+    background-color: #EEEEEE;
+    padding: 1px 4px;
+    border: 1px solid #DDDDDD;
+    font-family: monospace;
+    font-size: 0.8rem;
   }
 
   /* --- 6. TRABAJOS --- */
