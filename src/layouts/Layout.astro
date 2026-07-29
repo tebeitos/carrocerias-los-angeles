@@ -28,7 +28,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://carroceriaslosangeles.com/nave.jpg" />
+    <meta property="og:image" content="https://carroceriaslosangeles.com/nave.png" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
@@ -45,7 +45,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
         "@context": "https://schema.org",
         "@type": "AutoBodyShop",
         "name": "Carrocerías Los Ángeles",
-        "image": "https://carroceriaslosangeles.com/nave.jpg",
+        "image": "https://carroceriaslosangeles.com/nave.png",
         "description": "Taller de chapa y pintura tradicional en Gijón desde 1970. Especialistas en chapa batida a mano y restauración de vehículos clásicos.",
         "address": {
           "@type": "PostalAddress",
@@ -76,55 +76,21 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     <!-- Fajas industriales / Líneas de acento superiores -->
     <div class="top-industrial-bar"></div>
 
-    <!-- Banner Decorativo Izquierdo (Móvil Oculto, Escritorio Visible) -->
-    <aside class="vertical-sign sign-left" aria-hidden="true">
-      <span class="star">★</span>
-      <span class="vertical-text">CHAPA</span>
-      <span class="star">★</span>
-    </aside>
-
-    <!-- Banner Decorativo Derecho (Móvil Oculto, Escritorio Visible) -->
-    <aside class="vertical-sign sign-right" aria-hidden="true">
-      <span class="star">★</span>
-      <span class="vertical-text">PINTURA</span>
-      <span class="star">★</span>
-    </aside>
-
     <div class="page-wrapper">
       <!-- Encabezado Principal -->
       <header class="main-header">
         <div class="header-inner">
           
-          <!-- Bloque del Logotipo Réplica Rótulo Real -->
+          <!-- Bloque del Logotipo Réplica Rótulo Real (Pulido sin iconos externos) -->
           <a href="/" class="logo-link" title="Inicio - Carrocerías Los Ángeles">
             <div class="logo-block">
               <div class="logo-top-row">
-                <!-- Icono camión izquierdo -->
-                <svg class="truck-icon" viewBox="0 0 64 24" fill="currentColor">
-                  <path d="M2,18 L6,18 L6,14 L12,14 L16,8 L36,8 L36,18 L52,18 L52,12 L58,12 L62,16 L62,18 L60,18 C60,20 58,22 56,22 C54,22 52,20 52,18 L24,18 C24,20 22,22 20,22 C18,22 16,20 16,18 L8,18 C8,20 6,22 4,22 C2,22 0,20 0,18 Z M4,20 C5.1,20 6,19.1 6,18 C6,16.9 5.1,16 4,16 C2.9,16 2,16.9 2,18 C2,19.1 2.9,20 4,20 Z M20,20 C21.1,20 22,19.1 22,18 C22,16.9 21.1,16 20,16 C18.9,16 18,16.9 18,18 C18,19.1 18.9,20 20,20 Z M56,20 C57.1,20 58,19.1 58,18 C58,16.9 57.1,16 56,16 C54.9,16 54,16.9 54,18 C54,19.1 54.9,20 56,20 Z" />
-                </svg>
-                
                 <div class="banner-divided">
                   <span class="banner-text">Carrocerías</span>
                 </div>
-
-                <!-- Icono camión derecho -->
-                <svg class="truck-icon flip-h" viewBox="0 0 64 24" fill="currentColor">
-                  <path d="M2,18 L6,18 L6,14 L12,14 L16,8 L36,8 L36,18 L52,18 L52,12 L58,12 L62,16 L62,18 L60,18 C60,20 58,22 56,22 C54,22 52,20 52,18 L24,18 C24,20 22,22 20,22 C18,22 16,20 16,18 L8,18 C8,20 6,22 4,22 C2,22 0,20 0,18 Z M4,20 C5.1,20 6,19.1 6,18 C6,16.9 5.1,16 4,16 C2.9,16 2,16.9 2,18 C2,19.1 2.9,20 4,20 Z M20,20 C21.1,20 22,19.1 22,18 C22,16.9 21.1,16 20,16 C18.9,16 18,16.9 18,18 C18,19.1 18.9,20 20,20 Z M56,20 C57.1,20 58,19.1 58,18 C58,16.9 57.1,16 56,16 C54.9,16 54,16.9 54,18 C54,19.1 54.9,20 56,20 Z" />
-                </svg>
               </div>
               <div class="logo-bottom-row">
-                <!-- Icono coche izquierdo -->
-                <svg class="car-icon" viewBox="0 0 54 20" fill="currentColor">
-                  <path d="M2,14 L6,14 L8,10 L18,10 L22,6 L42,6 L46,10 L50,10 L52,14 C53,14 54,15 54,16 L54,17 L50,17 C50,18.7 48.7,20 47,20 C45.3,20 44,18.7 44,17 L14,17 C14,18.7 12.7,20 11,20 C9.3,20 8,18.7 8,17 L0,17 L0,16 C0,15 1,14 2,14 Z M11,18 C11.6,18 12,17.6 12,17 C12,16.4 11.6,16 11,16 C10.4,16 10,16.4 10,17 C10,17.6 10.4,18 11,18 Z M47,18 C47.6,18 48,17.6 48,17 C48,16.4 48.6,16 47,16 C46.4,16 46,16.4 46,17 C46,17.6 46.4,18 47,18 Z" />
-                </svg>
-                
                 <span class="logo-main-title">LOS ANGELES</span>
-
-                <!-- Icono coche derecho -->
-                <svg class="car-icon flip-h" viewBox="0 0 54 20" fill="currentColor">
-                  <path d="M2,14 L6,14 L8,10 L18,10 L22,6 L42,6 L46,10 L50,10 L52,14 C53,14 54,15 54,16 L54,17 L50,17 C50,18.7 48.7,20 47,20 C45.3,20 44,18.7 44,17 L14,17 C14,18.7 12.7,20 11,20 C9.3,20 8,18.7 8,17 L0,17 L0,16 C0,15 1,14 2,14 Z M11,18 C11.6,18 12,17.6 12,17 C12,16.4 11.6,16 11,16 C10.4,16 10,16.4 10,17 C10,17.6 10.4,18 11,18 Z M47,18 C47.6,18 48,17.6 48,17 C48,16.4 48.6,16 47,16 C46.4,16 46,16.4 46,17 C46,17.6 46.4,18 47,18 Z" />
-                </svg>
               </div>
             </div>
           </a>
@@ -138,6 +104,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
               <li><a href="/" class="nav-item">INICIO</a></li>
               <li><a href="/#oficio" class="nav-item">EL OFICIO</a></li>
               <li><a href="/#comparativa" class="nav-item">BATIR VS SOLDAR</a></li>
+              <li><a href="/#instalaciones" class="nav-item">EL TALLER</a></li>
               <li><a href="/#clasicos" class="nav-item">RESTAURACIÓN</a></li>
               <li><a href="/#trabajos" class="nav-item">TRABAJOS</a></li>
               <li><a href="/#opiniones" class="nav-item">OPINIONES</a></li>
@@ -278,53 +245,6 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     width: 100%;
   }
 
-  /* Rótulos Verticales a los lados del taller ("CHAPA" y "PINTURA") */
-  .vertical-sign {
-    display: none;
-  }
-
-  @media (min-width: 1200px) {
-    .vertical-sign {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--color-black);
-      color: var(--color-yellow);
-      border: var(--border-width) solid var(--color-red);
-      padding: 25px 8px;
-      z-index: 100;
-      box-shadow: none;
-      width: 54px;
-    }
-
-    .sign-left {
-      left: 15px;
-    }
-
-    .sign-right {
-      right: 15px;
-    }
-
-    .vertical-text {
-      writing-mode: vertical-rl;
-      text-orientation: upright;
-      font-family: var(--font-title);
-      font-size: 1.6rem;
-      letter-spacing: 0.15em;
-      margin: 15px 0;
-      line-height: 1;
-    }
-
-    .star {
-      font-size: 1.1rem;
-      color: var(--color-yellow);
-    }
-  }
-
   /* --- ESTRUCTURA GENERAL DE LA PÁGINA --- */
   .page-wrapper {
     max-width: 1100px;
@@ -342,7 +262,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     }
   }
 
-  /* --- HEADER & REPLICACIÓN RÓTULO REAL --- */
+  /* --- HEADER & REPLICACIÓN RÓTULO REAL (PULIDO SIN ICONOS) --- */
   .main-header {
     padding: 30px 0 20px 0;
     text-align: center;
@@ -367,23 +287,22 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     padding: 10px;
   }
 
-  /* Fila superior: Camión - Caja dividida - Camión */
+  /* Fila superior: Caja dividida */
   .logo-top-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     width: 100%;
   }
 
   .banner-divided {
     display: inline-flex;
     position: relative;
-    height: 48px;
+    height: 52px;
     align-items: center;
     justify-content: center;
-    padding: 0 45px;
+    padding: 0 55px;
     background: linear-gradient(to right, var(--color-black) 50%, var(--color-red) 50%);
     border: var(--border-width) solid var(--color-black);
   }
@@ -391,7 +310,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
   .banner-text {
     font-family: var(--font-logo);
     color: #FFFFFF;
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     font-weight: normal;
     line-height: 1;
     z-index: 2;
@@ -399,70 +318,36 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     display: inline-block;
   }
 
-  .truck-icon {
-    width: 55px;
-    height: 22px;
-    color: var(--color-black);
-    flex-shrink: 0;
-  }
-
-  /* Fila inferior: Coche - LOS ANGELES - Coche */
+  /* Fila inferior: LOS ANGELES */
   .logo-bottom-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
     width: 100%;
   }
 
   .logo-main-title {
     font-family: var(--font-title);
     color: var(--color-red);
-    font-size: 3.2rem;
+    font-size: 3.6rem;
     line-height: 0.95;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     -webkit-text-stroke: 1.5px var(--color-black);
-    text-shadow: 2.5px 2.5px 0px var(--color-black);
-  }
-
-  .car-icon {
-    width: 48px;
-    height: 18px;
-    color: var(--color-black);
-    flex-shrink: 0;
-  }
-
-  /* Utilidades para iconos */
-  .flip-h {
-    transform: scaleX(-1);
+    text-shadow: 3px 3px 0px var(--color-black);
   }
 
   @media (max-width: 600px) {
-    .logo-top-row {
-      gap: 5px;
-    }
     .banner-divided {
-      height: 38px;
-      padding: 0 25px;
+      height: 42px;
+      padding: 0 35px;
     }
     .banner-text {
-      font-size: 1.6rem;
-    }
-    .truck-icon {
-      width: 35px;
-      height: 14px;
-    }
-    .logo-bottom-row {
-      gap: 5px;
+      font-size: 1.8rem;
     }
     .logo-main-title {
-      font-size: 2.2rem;
+      font-size: 2.6rem;
       -webkit-text-stroke: 1px var(--color-black);
-      text-shadow: 1.5px 1.5px 0px var(--color-black);
-    }
-    .car-icon {
-      width: 30px;
-      height: 12px;
+      text-shadow: 2px 2px 0px var(--color-black);
     }
   }
 

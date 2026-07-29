@@ -28,15 +28,15 @@ import { negocio } from '../data/negocio';
         </div>
       </div>
 
-      <!-- Foto de la nave industrial del taller -->
+      <!-- Foto real de la nave industrial del taller -->
       <div class="hero-image-wrapper">
         <img 
-          src="/nave.jpg" 
-          alt="Fachada industrial del taller Carrocerías Los Ángeles en Gijón" 
+          src="/nave.png" 
+          alt="Fachada industrial real del taller Carrocerías Los Ángeles en Roces, Gijón" 
           class="hero-facade-img" 
         />
         <div class="image-caption">
-          Nave industrial en Gijón - Guillermo Marconi, 40 (Puente Seco)
+          Nuestra nave en Gijón - Calle Guillermo Marconi, 40
         </div>
       </div>
     </div>
@@ -137,7 +137,64 @@ import { negocio } from '../data/negocio';
     </div>
   </section>
 
-  <!-- 4. RESTAURACIÓN DE CLÁSICOS SECTION -->
+  <!-- 4. INSTALACIONES REALES SECTION (FOTOS REALES) -->
+  <section class="facilities-section" id="instalaciones">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">NUESTRO TALLER POR DENTRO</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <p class="section-intro-text">
+        Equipamiento industrial y áreas técnicas preparadas para ofrecer una restauración de chapa de máxima calidad tanto en turismos como en furgonetas y vehículos industriales pesados.
+      </p>
+
+      <div class="facilities-grid">
+        
+        <!-- Bloque 1: Horno e Interior -->
+        <div class="facility-card">
+          <div class="facility-image-wrapper">
+            <img src="/taller_interior.jpg" alt="Interior del taller mostrando cabina de pintura de gran formato con un camión pesado dentro" class="facility-img" />
+          </div>
+          <div class="facility-info-box">
+            <h3 class="facility-card-title">Cabina de Pintura y Secado</h3>
+            <p class="facility-card-desc">
+              Instalaciones de gran formato optimizadas para el pintado al horno. Nuestra cabina cuenta con capacidad dimensional para turismos y vehículos industriales de gran envergadura (furgonetas de reparto, autobuses y camiones).
+            </p>
+          </div>
+        </div>
+
+        <!-- Bloque 2: Laboratorio de mezcla -->
+        <div class="facility-card">
+          <div class="facility-image-wrapper">
+            <img src="/laboratorio.jpg" alt="Operario del taller en el laboratorio de mezcla de pintura formulando el color por ordenador" class="facility-img" />
+          </div>
+          <div class="facility-info-box">
+            <h3 class="facility-card-title">Laboratorio Informático de Color</h3>
+            <p class="facility-card-desc">
+              Preparación digital de pintura mediante el sistema de mezcla R-M Fleximix. Formulamos y pesamos electrónicamente cada color para reproducir de forma idéntica el tono original de fábrica de su vehículo, evitando diferencias visuales.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bloque 3: Acceso fachada (bus) -->
+        <div class="facility-card full-width-card">
+          <div class="facility-image-wrapper">
+            <img src="/fachada_bus.png" alt="Acceso al taller y zona exterior de maniobra en Polígono de Roces" class="facility-img" />
+          </div>
+          <div class="facility-info-box">
+            <h3 class="facility-card-title">Acceso y Maniobra para Vehículos Industriales</h3>
+            <p class="facility-card-desc">
+              Situados en el Polígono de Roces – Puente Seco, contamos con un amplio portón de acceso y zona de maniobra en calle que facilita la entrada de vehículos pesados y flotas comerciales directamente a nuestras líneas de chapa y pintura.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. RESTAURACIÓN DE CLÁSICOS SECTION -->
   <section class="classics-section" id="clasicos">
     <div class="section-container">
       <div class="section-header">
@@ -179,7 +236,7 @@ import { negocio } from '../data/negocio';
     </div>
   </section>
 
-  <!-- 5. TRABAJOS SECTION (ANTES / DESPUÉS) -->
+  <!-- 6. TRABAJOS SECTION (ANTES / DESPUÉS) -->
   <section class="work-gallery-section" id="trabajos">
     <div class="section-container">
       <div class="section-header">
@@ -267,7 +324,7 @@ import { negocio } from '../data/negocio';
     </div>
   </section>
 
-  <!-- 6. RESEÑAS SECTION -->
+  <!-- 7. RESEÑAS SECTION -->
   <section class="reviews-section" id="opiniones">
     <div class="section-container">
       <div class="section-header">
@@ -315,7 +372,7 @@ import { negocio } from '../data/negocio';
     </div>
   </section>
 
-  <!-- 7. UBICACIÓN Y CONTACTO SECTION -->
+  <!-- 8. UBICACIÓN Y CONTACTO SECTION -->
   <section class="contact-location-section" id="contacto">
     <div class="section-container">
       <div class="section-header">
@@ -692,7 +749,81 @@ import { negocio } from '../data/negocio';
     text-align: center;
   }
 
-  /* --- 4. RESTAURACIÓN --- */
+  /* --- 4. INSTALACIONES (FOTOS REALES) --- */
+  .facilities-section {
+    padding: 50px 0;
+    border-top: var(--border-width) solid var(--color-black);
+  }
+
+  .section-intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+    max-width: 800px;
+  }
+
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    .facilities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .facility-card {
+    background-color: white;
+    border: var(--border-width) solid var(--color-black);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .full-width-card {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 768px) {
+    .full-width-card {
+      grid-column: span 1;
+    }
+  }
+
+  .facility-image-wrapper {
+    width: 100%;
+    border-bottom: var(--border-width) solid var(--color-black);
+    background-color: var(--color-black);
+    overflow: hidden;
+  }
+
+  .facility-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 16/10;
+  }
+
+  .facility-info-box {
+    padding: 25px;
+  }
+
+  .facility-card-title {
+    font-size: 1.5rem;
+    color: var(--color-red);
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+
+  .facility-card-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+  }
+
+  /* --- 5. RESTAURACIÓN --- */
   .classics-section {
     padding: 50px 0;
     border-top: var(--border-width) solid var(--color-black);
@@ -774,16 +905,10 @@ import { negocio } from '../data/negocio';
     letter-spacing: 0.05em;
   }
 
-  /* --- 5. TRABAJOS --- */
+  /* --- 6. TRABAJOS --- */
   .work-gallery-section {
     padding: 50px 0;
     border-top: var(--border-width) solid var(--color-black);
-  }
-
-  .section-intro-text {
-    font-size: 1.1rem;
-    margin-bottom: 35px;
-    max-width: 800px;
   }
 
   .works-grid {
@@ -895,7 +1020,7 @@ import { negocio } from '../data/negocio';
     max-width: 320px;
   }
 
-  /* --- 6. RESEÑAS --- */
+  /* --- 7. RESEÑAS --- */
   .reviews-section {
     padding: 50px 0;
     border-top: var(--border-width) solid var(--color-black);
@@ -983,7 +1108,7 @@ import { negocio } from '../data/negocio';
     padding-top: 10px;
   }
 
-  /* --- 7. UBICACIÓN Y CONTACTO --- */
+  /* --- 8. UBICACIÓN Y CONTACTO --- */
   .contact-location-section {
     padding: 50px 0 20px 0;
     border-top: var(--border-width) solid var(--color-black);
