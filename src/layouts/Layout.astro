@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 
 // Asegurar que el canonical apunte al dominio oficial de producción, nunca a localhost
-const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
+const canonicalUrl = `https://carrocerias-los-angeles.vercel.app${Astro.url.pathname}`;
 ---
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://carroceriaslosangeles.com/nave.png" />
+    <meta property="og:image" content="https://carrocerias-los-angeles.vercel.app/nave.png" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
@@ -45,7 +45,7 @@ const canonicalUrl = `https://carroceriaslosangeles.com${Astro.url.pathname}`;
         "@context": "https://schema.org",
         "@type": "AutoBodyShop",
         "name": "Carrocerías Los Ángeles",
-        "image": "https://carroceriaslosangeles.com/nave.png",
+        "image": "https://carrocerias-los-angeles.vercel.app/nave.png",
         "description": "Taller de chapa y pintura tradicional en Gijón desde 1970. Especialistas en chapa batida a mano y restauración de vehículos clásicos.",
         "address": {
           "@type": "PostalAddress",
